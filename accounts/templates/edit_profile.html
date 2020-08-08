@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+<div class="row">
+  <div class="edit">
+    <form method="post">
+      {% csrf_token %}
+      {{profile_form}}
+      {{user_form}}
+      <button type="submit">Save Changes</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
